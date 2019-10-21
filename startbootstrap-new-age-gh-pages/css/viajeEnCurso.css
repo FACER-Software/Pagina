@@ -1,0 +1,208 @@
+.wrapper {
+    margin-top: 13%;
+    height: 60vh;
+}
+
+.contenedor, .contenedor .row{
+    height: inherit;
+}
+
+.bg-verde {
+    background-color: #20cc4c;
+}
+
+.texto-verde {
+    color: #20cc4c;
+}
+
+h4 {
+    color: #20cc4c
+}
+
+.modal-header h5 {
+    width: 100%;
+}
+
+.wrapper iframe {
+    width: 100%;
+    height: 50%;
+    border: 3px solid #145f27;
+    border-radius: 5px;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+    border: 3px solid #145f27;
+    border-radius: 5px;
+}
+
+.botones {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btnCancelar {
+    width: 60%;
+    margin-right: 40%;
+    background-color: #ce1009;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btnCancelar:hover, .btnCancelar:focus {
+    transition: 0.3s;
+    width: 100%;
+    background-color: #7c0b07;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btnTerminar {
+    width: 100%;
+    background-color: #20cc4c;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btnTerminar:hover, .btnTerminar:focus {
+    transition: 0.3s;
+    width: 170%;
+    background-color: #145f27;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    outline: none !important
+}
+
+.costoF {
+    font-size: 24px;
+    font-weight: 700
+}
+
+.labels {
+    display: flex;
+    justify-content: center
+}
+
+label {
+    display: flex;
+    width: 10%;
+    margin: 0 10px;
+    height: 10vh;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio]+img {
+    cursor: pointer;
+    width: 100%
+}
+
+[type=radio]+img:hover {
+    cursor: pointer;
+    width: 100%
+}
+
+.star1 [type=radio]:checked+img {
+    outline: none;
+    content: url(../img/star1-checked.svg)
+}
+
+.star2 [type=radio]:checked+img {
+    outline: none;
+    content: url(../img/star2-checked.svg)
+}
+
+.star3 [type=radio]:checked+img {
+    outline: none;
+    content: url(../img/star3-checked.svg)
+}
+
+.star4 [type=radio]:checked+img {
+    outline: none;
+    content: url(../img/star4-checked.svg)
+}
+
+.star5 [type=radio]:checked+img {
+    outline: none;
+    content: url(../img/star5-checked.svg)
+}
+
+.label1 input[type=radio] {
+    display: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.label1 input[type=radio]+label {
+    height: 5vw !important;
+    width: 5vw !important;
+    background-image: url('../img/cleaner-first.svg') !important;
+    background-size: 100%;
+}
+
+.label1 input[type=radio]:hover+label {
+    cursor: pointer;
+    background-image: url('../img/cleaner-selected.svg') !important;
+}
+.label1 input[type=radio]:checked+label {
+    background-image: url('../img/cleaner-selected.svg') !important;
+}
+
+.label2 input[type=radio] {
+    display: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.label2 input[type=radio]+label {
+    height: 5vw !important;
+    width: 5vw !important;
+    background-image: url('../img/watch-selected.svg') !important;
+    background-size: 100%;
+}
+
+.label2 input[type=radio]:hover+label {
+    cursor: pointer;
+    background-image: url('../img/watch.svg') !important;
+}
+.label2 input[type=radio]:checked+label {
+    background-image: url('../img/watch.svg') !important;
+}
+
+.label3 input[type=radio] {
+    display: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.label3 input[type=radio]+label {
+    height: 5vw !important;
+    width: 5vw !important;
+    background-image: url('../img/communication.svg') !important;
+    background-size: 100%;
+}
+
+.label3 input[type=radio]:hover+label {
+    cursor: pointer;
+    background-image: url('../img/communication-checked.svg') !important;
+}
+.label3 input[type=radio]:checked+label {
+    background-image: url('../img/communication-checked.svg') !important;
+}
+
+.modal-footer button {
+    width: 50%;
+}

@@ -1,0 +1,362 @@
+body {
+    overflow-x: hidden;
+}
+
+.bg-verde {
+    background-color: #20cc4c
+}
+
+a {
+    margin: 0 auto;
+    width: 50%;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.texto-verde {
+    color: #20cc4c;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    opacity: 1;
+}
+
+h4 {
+    width: 100%;
+    margin: 1% auto;
+}
+
+h5 {
+    margin-top: 7%;
+}
+
+h6 {
+    width: 100%;
+}
+
+#boton {
+    outline: none;
+}
+
+.boton {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    padding: 0;
+    display: block;
+    outline: rgba(0, 0, 0, 0);
+    color: #fff;
+}
+
+.contenedorR {
+    width: 50%;
+    margin: 16% auto;
+    justify-content: space-around;
+}
+
+.contenedorRutas {
+    width: 80%;
+    margin: 10% auto 0;
+    justify-content: center
+}
+
+.contenedorRutas form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boton-auto-privado {
+    height: 50% !important;
+}
+
+.contenedorR img {
+    width: 60%;
+}
+
+.boton-regresar {
+    width: 20%;
+    margin-right: 0;
+}
+
+.opcion1 {
+    margin-top: 20%;
+    background-color: #20cc4c;
+    width: 60%;
+    height: 50%;
+    color: white;
+    opacity: 1;
+    margin: 0 5%;
+    border-radius: 7px;
+}
+
+.opcion1:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: #145f27;
+    opacity: 1;
+    color: white;
+}
+
+.partidaCombo {
+    padding: 0.75%
+}
+
+.destino {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3%;
+}
+
+.destinoCombo {
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.buscarRuta {
+    width: 20%;
+    margin: 0 5%;
+}
+
+.contenedorMapa {
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.iniciarViaje {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.row {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.map {
+    width: 100%;
+    padding: 2%;
+    height: 50vh !important;
+    border: 3px solid #145f27;
+    border-radius: 5px;
+}
+
+.contenedorMapa .botones {
+    display: flex;
+    height: 50vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa {
+    margin-top: 10%;
+    width: 100vw;
+}
+
+.mapa .container-fluid {
+    width: 100%;
+}
+
+.botones button, .botones input {
+    width: 80%;
+    border-radius: 3px;
+}
+
+.botonMapa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-dialog {
+    height: 90%;
+}
+
+.modal-dialog iframe {
+    width: 80%;
+    height: 50%;
+    margin: 0 auto;
+    border: 3px solid #145f27;
+    border-radius: 3px;
+}
+
+.modal-dialog img {
+    width: 10%;
+}
+
+.btnAceptar {
+    background-color: #20cc4c;
+    color: white;
+    border-radius: 500px;
+    margin: 2% 3% 0;
+    width: 65%;
+    opacity: 1 !important;
+}
+
+.btnAceptar:hover, .btnAceptar:focus {
+    transition: 0.4s;
+    background-color: #145f27;
+    border-color: #145f27;
+    color: white;
+    box-shadow: none
+}
+
+.btnBuscar {
+    background-color: #2b81b9;
+    color: white;
+    border-radius: 500px;
+    margin: 2% 0 0 3%;
+    width: 25%;
+    opacity: 1 !important;
+}
+
+.btnBuscar:hover, .btnBuscar:focus {
+    transition: 0.4s;
+    background-color: #23506e;
+    border-color: #23506e;
+    color: white;
+    box-shadow: none;
+}
+
+.botones {
+    width: 100%;
+}
+
+.btnComenzar {
+    background-color: #20cc4c;
+    color: white;
+    border-radius: 500px;
+    margin: 7% 1% 0;
+    width: 65%;
+    opacity: 1 !important;
+}
+
+.btnComenzar:hover, .btnComenzar:focus {
+    transition: 0.4s;
+    background-color: #145f27;
+    border-color: #145f27;
+    color: white;
+    box-shadow: none
+}
+
+.btnBack {
+    background-color: #2b81b9;
+    color: white;
+    border-radius: 500px;
+    margin: 7% 1% 0;
+    width: 25%;
+    opacity: 1 !important;
+}
+
+.btnBack:hover, .btnBack:focus {
+    transition: 0.4s;
+    background-color: #23506e;
+    border-color: #23506e;
+    color: white;
+    box-shadow: none;
+}
+
+.infoViaje {
+    height: 20%;
+}
+
+label {
+    width: 40%;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio]+img {
+    cursor: pointer;
+    width: 40%;
+}
+
+[type=radio]+img:hover {
+    cursor: pointer;
+    width: 40%;
+}
+
+.tarjeta [type=radio]:checked+img {
+    outline: none;
+    content: url(../img/card-selected.svg)
+}
+
+.efectivo [type=radio]:checked+img {
+    outline: none;
+    content: url(../img/dollar-bills-selected.svg)
+}
+
+.metodosPago {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap
+}
+
+select {
+    border: 2px solid #145f27;
+    border-radius: 5px;
+}
+
+.kilometros, .tiempo {
+    display: none;
+}
+
+.Encontrado {
+    height: 55vh !important;
+}
+
+.imagenesEncontrado {
+    display: flex;
+    flex-wrap: wrap !important
+}
+
+.imagenesEncontrado img, .imagenesEncontrado h6 {
+    width: 15vw !important;
+}
+
+.padd-4 {
+    padding: 10%;
+}
+
+@media screen and (max-width: 768px) {
+    .tituloIndex {
+        display: none
+    }
+    .botonRegresar {
+        margin: 0 auto;
+    }
+    .destino {
+        margin-bottom: 20px;
+    }
+    .destinoCombo {
+        margin: 0;
+    }
+    .mapa {
+        margin-top: 15%
+    }
+    .buscarRuta {
+        margin: 0;
+        width: 29%;
+    }
+    .botones {
+        margin-bottom: 4%;
+    }
+    .botones input {
+        margin: 1% auto;
+    }
+}

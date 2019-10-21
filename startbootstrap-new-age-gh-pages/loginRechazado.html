@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+
+<head>
+    <title>Eco Ways</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/styleRegistro.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="icon" href="img/leaf.png">
+    <link rel="stylesheet" href="./css/colores.css">
+    <link rel="stylesheet" href="./css/fuentes.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50" class="body-login">
+
+
+    <!--Menu Secciones-->
+    <section class="login">
+        <div class="container">
+            <div class="card card-container">
+                <a href="index.html">
+                    <div class="tituloLogin">
+                        <img src="./img/leaf.svg" alt="logotipo" />
+                        <h1 class="text-center colorEcoWays">EcoWays</h1>
+                    </div>
+                </a>
+                <p id="error_msg" class="profile-name-card"></p>
+                <!--Form de Login-->
+                <form class="form-signin" id="ingreso" method="post" action="./login.jsp">
+                    <span id="reauth-email" class="reauth-email"></span>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Correo electrónico"
+                        required autofocus>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña"
+                        required>
+                    <label class="credenciales">
+                        <img src="./img/danger.svg" class="credencialDanger">
+                        <span class="credencialErronea">
+                            Credenciales erroneas, intente de nuevo
+                        </span>
+                    </label>
+
+                    <button form="ingreso" class="btn btn-lg btn-primary btn-block btn-signin"
+                        type="submit">Entrar</button>
+                </form><!-- Fin del Form -->
+                <br>
+                <!--Contraseñas y Registro-->
+                <span class="colorEcoWays">Registrate ahora</span>
+                <div class="buttonContainerR">
+                    <a href="#myModal" class="sinDecoration">
+                        <button form="ingreso" class="btn btn-primary btn-signin btn-special" type="button"
+                            data-toggle="modal" data-target="#politecnico">Politécnico</button>
+                    </a>
+                    <a href="#myModal" class="sinDecoration">
+                        <button form="ingreso" class="btn btn-primary btn-signin btn-special" type="button"
+                            data-toggle="modal" data-target="#conductor">Conductor</button>
+                    </a>
+                </div>
+                <a href="#olvido" class="pt-4" data-toggle="modal"><span class="colorEcoWays">
+                        ¿Olvidaste tu contraseña?
+                    </span>
+                </a>
+                <a href="AceptarUsuarios.html" class="pt-4"><span class="colorEcoWays">
+                        ¿Eres administrador?
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--Modal Password Olvidada-->
+    <div class="modal fade" id="olvido" role="dialog">
+        <div class="modal-dialog modal-sm recuperarContra">
+            <div class="modal-content personalizado">
+                <button id="cerrar_modal" type="button" class="close" data-dismiss="modal">x</button>
+                <h4 class="text-center texto-verde">Escribe tu correo electronico</h4>
+                <form id="olvido_ingreso" class="login-form" method="post">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input id="recuperar_email" name="recuperar_email" type="email"
+                                placeholder="correo@electronico.com" class="form-control" required>
+                        </div>
+                        <button form="olvido_ingreso" type="submit" class="btn btn-primary btn-signin">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Pasword Olvidado-->
+
+    <!--Modal Politecnico-->
+    <div class="modal fade" id="politecnico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modalRegistrarse">
+                <div class="modal-body">
+                    <button id="cerrar_modal" type="button" class="close" data-dismiss="modal">x</button>
+                    <h2>Registrarse</h2>
+                    <form id="registrarse" method="post" action="RegistroPolitecnico.jsp">
+                        <div class="wrapperColumnas">
+                            <h3 class="text-center texto-verde">Información personal</h3>
+                            <hr class="lineaRegistro">
+                            <div class="columna1">
+                                <label>Nombre Completo</label>
+                                <div class="form-group">
+                                    <input id="NombreP" name="NombrePoli" type="text" placeholder="Ingrese Nombre"
+                                        class="form-control" required>
+                                </div>
+                                <label>Edad</label>
+                                <div class="form-group">
+                                    <input id="EdadP" name="EdadPolitecnico" type="text" placeholder="Ingrese Edad"
+                                        class="form-control" required>
+                                </div>
+                                <label>Celular</label>
+                                <div class="form-group">
+                                    <input id="celP" name="celular" type="tel" placeholder="Numero de Celular"
+                                        class="form-control" maxlength="10" required>
+                                </div>
+                                <label>Escuela</label>
+                                <div class="form-group">
+                                    <select id="EscuelaP" name="EscuelaPolitecnico" class="form-control" required>
+                                        <option> CECyT 1 </option>
+                                        <option> CECyT 2</option>
+                                        <option> CECyT 3</option>
+                                        <option> CECyT 4</option>
+                                        <option> CECyT 5</option>
+                                        <option> CECyT 6</option>
+                                        <option> CECyT 7</option>
+                                        <option> CECyT 8</option>
+                                        <option> CECyT 9</option>
+                                        <option> CECyT 10</option>
+                                        <option> CECyT 11</option>
+                                        <option> CECyT 12</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h2 id="mensaje_validacion_password" class="form-control" hidden></h2>
+                                </div>
+                                <label>Foto de Perfil:</label>
+                                <label class="fotoPerfil" for="FotoPoli">Da click para seleccionar imagen</label>
+                                <div class="form-group">
+                                    <input type="file" id="FotoPoli" name="FotoPoli" required>
+                                </div>
+                            </div>
+                            <div class="columna2">
+                                <label>Correo</label>
+                                <div class="form-group">
+                                    <input id="correoP" name="correoPoli" type="email"
+                                        placeholder="correo@electronico.com" class="form-control" required>
+                                </div>
+                                <label>Contraseña</label>
+                                <div class="form-group">
+                                    <input id="nuevo_pass" name="nuevo_pass" type="password"
+                                        placeholder="Ingrese Contraseña" class="form-control" required>
+                                </div>
+                                <label>Repetir Contraseña</label>
+                                <div class="form-group">
+                                    <input id="repetir" name="repetir" type="password" placeholder="Repetir Contraseña"
+                                        class="form-control" required>
+                                </div>
+                                <label>Boleta/Numero de Empleado</label>
+                                <div class="form-group">
+                                    <input id="BoletaP" name="BoletaPoli" type="text" placeholder="Ingrese Boleta"
+                                        class="form-control" required>
+                                </div>
+                                <label>Foto de La credencial del Politécnico:</label>
+                                <label class="fotoPerfil" for="FotoCredeP">Da click para seleccionar imagen</label>
+                                <div class="form-group">
+                                    <input type="file" id="FotoCredeP" name="FotoCrede" required>
+                                </div>
+                            </div>
+                            <h3 class="text-center texto-verde ">Información personal</h3>
+                            <hr class="lineaRegistro">
+                            <div class="columna1">
+                                <label>Calle</label>
+                                <div class="form-group">
+                                    <input id="CalleP" name="Calle" type="text" placeholder="Nombre de la calle"
+                                        class="form-control" required>
+                                </div>
+                                <label>Numero Interior</label>
+                                <div class="form-group">
+                                    <input id="numIntCalleP" name="NumInt" type="text"
+                                        placeholder="Numero interior del Domicilio" class="form-control">
+                                </div>
+                                <label>Codigo Postal</label>
+                                <div class="form-group">
+                                    <input id="CodigoPP" name="CPostal" type="text" placeholder="Codigo Postal"
+                                        class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="columna2">
+                                <label>Numero</label>
+                                <div class="form-group">
+                                    <input id="numCalleP" name="NumCalle" type="text" placeholder="Numero del Domicilio"
+                                        class="form-control" required>
+                                </div>
+                                <label>Colonia</label>
+                                <div class="form-group">
+                                    <input id="ColoP" name="Colo" type="text" placeholder="Nombre de la colonia"
+                                        class="form-control" required>
+                                </div>
+                                <label>Alcaldia/Municipio</label>
+                                <div class="form-group">
+                                    <input id="MunicipioP" name="Muni" type="text"
+                                        placeholder="Nombre de la Alcaldía/Municipio" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-group">
+                            <button id="mandar_cambio" type="submit" form="registrarse"
+                                class="btn btn-enviar">Enviar</button>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Fin Modal Politecnico -->
+    <!-- Modal Conductor--->
+    <div class="modal fade" id="conductor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modalRegistrarse">
+                <div class="modal-body">
+                    <button id="cerrar_modal" type="button" class="close" data-dismiss="modal">x</button>
+                    <h2>Registrarse</h2>
+                    <form id="registro" method="post" action="RegistroConductor.jsp">
+                        <div class="wrapperColumnas">
+                            <h3 class="text-center texto-verde">Información personal</h3>
+                            <hr class="lineaRegistro">
+                            <div class="columna1">
+                                <label>Nombre Completo</label>
+                                <div class="form-group">
+                                    <input id="NombreC" name="NobreCondu" type="text" placeholder="Ingrese Nombre"
+                                        class="form-control" required>
+                                </div>
+                                <label>Edad</label>
+                                <div class="form-group">
+                                    <input id="EdadC" name="EdadCondu" type="text" placeholder="Ingrese Edad"
+                                        class="form-control" required>
+                                </div>
+                                <label>Celular</label>
+                                <div class="form-group">
+                                    <input id="celC" name="celularCondu" type="tel" placeholder="Numero de Celular"
+                                        class="form-control" maxlength="10" required>
+                                </div>
+                                <label>Avenida Principal que mas Frecuenta</label>
+                                <div class="form-group">
+                                    <input id="RutasC" name="rutas" type="text" placeholder="Ingrese Nombre de Avenida"
+                                        class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <h2 id="mensaje_validacion_password" class="form-control" hidden></h2>
+                                </div>
+                                <label>Foto de Perfil:</label>
+                                <label for="FotoC" class="fotoPerfil">Selecciona archivo</label>
+                                <div class="form-group">
+                                    <input type="file" id="FotoC" name="FotoCondu" required>
+                                </div>
+                            </div>
+                            <div class="columna2">
+                                <label>Correo</label>
+                                <div class="form-group">
+                                    <input id="correoC" name="correoPoli" type="email" placeholder="correo@electronico.com"
+                                        class="form-control" required>
+                                </div>
+                                <label>Contraseña</label>
+                                <div class="form-group">
+                                    <input id="nuevo_pass" name="pass" type="password" placeholder="Ingrese Contraseña"
+                                        class="form-control" required>
+                                </div>
+                                <label>Repetir Contraseña</label>
+                                <div class="form-group">
+                                    <input id="repetir" name="repetir" type="password" placeholder="Repetir Contraseña"
+                                        class="form-control" required>
+                                </div>
+                                <label>Foto de La Licencia de Conducir</label>
+                                <label for="FotoLicencia" class="fotoPerfil">Selecciona archivo</label>
+                                <div class="form-group">
+                                    <input type="file" id="FotoLicencia" name="FotoLicencia" required>
+                                </div>
+                                <label>Foto del INE</label>
+                                <label for="FotoINEC" class="fotoPerfil">Selecciona archivo</label>
+                                <div class="form-group">
+                                    <input type="file" id="FotoINEC" name="FotoINE" required>
+                                </div>
+                            </div>
+                            <h3 class="text-center texto-verde">Información del Domicilio</h3>
+                            <hr class="lineaRegistro">
+                            <div class="columna1">
+                                <label>Calle</label>
+                                <div class="form-group">
+                                    <input id="CalleC" name="Calle" type="text" placeholder="Nombre de la calle"
+                                        class="form-control" required>
+                                </div>
+                                <label>Numero Interior</label>
+                                <div class="form-group">
+                                    <input id="numIntCalleC" name="NumInt" type="text"
+                                        placeholder="Numero interior del Domicilio" class="form-control">
+                                </div>
+                                <label>Codigo Postal</label>
+                                <div class="form-group">
+                                    <input id="CodigoPC" name="CPostal" type="text" placeholder="Codigo Postal"
+                                        class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="columna2">
+                                <label>Numero</label>
+                                <div class="form-group">
+                                    <input id="numCalleP" name="NumCalle" type="text" placeholder="Numero del Domicilio"
+                                        class="form-control" required>
+                                </div>
+                                <label>Colonia</label>
+                                <div class="form-group">
+                                    <input id="ColoP" name="Colo" type="text" placeholder="Nombre de la colonia"
+                                        class="form-control" required>
+                                </div>
+                                <label>Alcaldia/Municipio</label>
+                                <div class="form-group">
+                                    <input id="MunicipioP" name="Muni" type="text"
+                                        placeholder="Nombre de la Alcaldía/Municipio" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-group">
+                            <button id="mandar_cambio" type="submit" form="registro" class="btn btn-enviar">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Modal para Conductores-->
+
+
+    <footer class="page-footer font-small blue">
+        <div class="copyright py-4 text-center text-white">
+            <div class="container">
+                <small>Copyright &copy; AjoloCoding 2019</small>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+    integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //Disable cut copy paste
+        $('body').bind('cut copy paste', function (e) {
+            e.preventDefault();
+        });
+
+        //Disable mouse right click
+        $("body").on("contextmenu", function (e) {
+            return false;
+        });
+    });
+</script>
+
+</html>
+

@@ -1,0 +1,35 @@
+.containerCal{
+    width: 80%;
+    height: 70vh;
+    margin: 15% auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.calif{
+    width: 45%;
+    height: 100%;
+    border: 3px solid gray;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.insignias{
+    width: 45%;
+    height: 100%;
+    border: 3px solid gray;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.progress{
+    height: 30px;
+    margin: 10%;
+}
+
+.botonesCal{
+    height: 30%;
+    margin: 20px;
+}

@@ -1,0 +1,853 @@
+/*INICIO ESTILO GRAFICA*/
+html,body { overflow-y:hidden; }
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.bar {
+    fill: orange;
+}
+
+.solidArc:hover {
+    fill: orangered;
+}
+
+.solidArc {
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.aster-score {
+    line-height: 1;
+    font-weight: bold;
+    font-size: 350%;
+}
+
+.name-scored {
+    line-height: 1;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    z-index: 10000;
+}
+
+/* Creates a small triangle extender for the tooltip */
+
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+/*FIN ESTILO GRAFICA*/
+
+body {
+    background-image: url('../images/Background.svg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 13px;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.colorEcoWays {
+    color: #3b5b7b;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, a:focus {
+    opacity: 0.6;
+    transition: 0.7s;
+    text-decoration: none;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.form-check-label {
+    padding-left: 0.25rem;
+    margin-bottom: 0;
+    margin-right: 30px;
+}
+
+/*Footer
+=============*/
+
+.mt-4 {
+    margin-top: 12% !important;
+}
+
+/* 
+=================*/
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.pass {
+    margin-top: 20px;
+    width: 200px !important;
+}
+
+/*
+ * Card component
+ */
+
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 12px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 250px;
+    height: 150px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.card-container.card2 {
+    max-width: 100%;
+    padding: 80px 40px;
+}
+
+.tituloLogin {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloLogin img {
+    width: 25%;
+}
+
+/*
+ * Form styles
+ */
+
+.profile-name-card {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+    color: red;
+}
+
+.fondoLoginImg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fondoLoginImg div {
+    width: 24%;
+}
+
+.fondoLoginImg .a {
+    animation: aparece1 4s normal infinite
+}
+
+@keyframes aparece1 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fondoLoginImg .b {
+    animation: aparece2 3s normal infinite
+}
+
+@keyframes aparece2 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fondoLoginImg .c {
+    animation: aparece3 2s normal infinite
+}
+
+@keyframes aparece3 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 0;
+    }
+    79% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fondoLoginImg .d {
+    animation: aparece4 2s normal infinite
+}
+
+@keyframes aparece4 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.cont1 {
+    display: flex;
+    justify-content: space-evenly;
+    height: 7%;
+}
+
+.cont2 {
+    display: flex;
+    justify-content: center;
+    height: 3%;
+}
+
+.cont3 {
+    display: flex;
+    justify-content: flex-end;
+    height: 10%;
+}
+
+.count4 {
+    display: flex;
+    justify-content: center;
+    height: 5%;
+}
+
+.fondoLoginImg img {
+    width: 7%;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sinDecoration, .sinDecoration button {
+    text-decoration: none;
+}
+
+.btn.btn-signin {
+    background-color: #20cc4c;
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    border-radius: 500px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.btn.btn-signin:hover, .btn.btn-signin:active, .btn.btn-signin:focus {
+    transition: 0.5s;
+    opacity: 1;
+    background-color: #145f27;
+    color: white;
+    box-shadow: none;
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background: #3b5b7b;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.forgot-password:hover, .forgot-password:active, .forgot-password:focus {
+    color: #CC252C;
+}
+
+@media (max-width: 768px) {
+    #login {
+        height: 100vh;
+    }
+}
+
+.crc-izq {
+    padding: 15px;
+    float: left;
+    width: 170px;
+    height: 170px;
+}
+
+.img-der {
+    float: right;
+}
+
+.img-izq {
+    float: left;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.logotipoWhite {
+    padding-bottom: 10px;
+}
+
+.despind {
+    padding-top: 66px;
+    cursor: pointer;
+}
+
+.navi {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#aprobado {
+    background-image: url(../images/Aprobada.svg);
+    padding-left: 20px;
+    background-repeat: no-repeat;
+}
+
+#cancelado {
+    background-image: url(../images/Cancelada.svg);
+    padding-left: 20px;
+    background-repeat: no-repeat;
+}
+
+#revision {
+    background-image: url(../images/Revision.svg);
+    padding-left: 20px;
+    background-repeat: no-repeat;
+}
+
+#pendiente {
+    background-image: url(../images/Pendiente.svg);
+    padding-left: 20px;
+    background-repeat: no-repeat;
+}
+
+/*------------------------ formulario ------------------*/
+
+.cajita {
+    border-radius: 5px;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.margen {
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.fecha, .realiza, .solic, .empresa, .proyecto, .sede {
+    display: block;
+    width: -webkit-fill-available;
+    border-radius: 5px;
+}
+
+.lada {
+    width: 50px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.observ {
+    height: 150px;
+    width: 100%;
+    resize: none;
+    border-color: #063450;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.observ2 {
+    height: 125px;
+    width: 100%;
+    resize: none;
+    border-radius: 5px;
+    border-color: #063450;
+}
+
+.checkbox {
+    width: 306px;
+    padding-top: 15px;
+}
+
+.check-a {
+    float: left;
+}
+
+.check-c {
+    margin-bottom: 30px;
+}
+
+.empresa_consulta {
+    width: 148px;
+}
+
+/* Continuar
+===============*/
+
+.btnalt {
+    width: 75px;
+    margin-left: 30px;
+    margin-right: 0px;
+    margin-top: 30px;
+    font-size: 13px
+}
+
+/* Revisar cuando el modal de consulta Rh este terminado*/
+
+.btnbsc {
+    width: 75px;
+    font-size: 13px;
+    float: right;
+}
+
+.boton2 {
+    width: 190px;
+    margin-top: 50px;
+    float: right;
+}
+
+.btnm-g {
+    margin-right: 58px;
+    margin-top: 20px !important;
+    width: auto;
+}
+
+.boton3 {
+    width: 190px;
+    margin-top: 9px;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#slide-wrap {
+    overflow: auto;
+    border: 2px solid #ffffff;
+    padding-top: 20px;
+    height: 200px;
+    margin-top: 40px;
+}
+
+#inner-wrap {
+    float: left;
+    margin-right: -3width="100px" height="100px"0000px;
+    /*Be safe with Opera's limited negative margin of 32695px (-999em could cause problems with large font sizes)*/
+    padding-left: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+div.horizontal-fields input, div.horizontal-fields textarea, div.horizontal-fields select, div.horizontal-fields label {
+    float: left;
+    width: auto;
+    border-radius: 5px;
+}
+
+div.horizontal-fields button {
+    width: auto;
+    margin: 0;
+}
+
+/* Horizontal fields is the class which is not re-sizing it's with correctly */
+
+.horizontal-fields {
+    display: inline;
+    width: 1500px;
+}
+
+.horizontal-fields2 {
+    display: inline;
+    width: 1100px;
+}
+
+.service-item {
+    clear: left;
+}
+
+.pago {
+    width: 20px;
+    height: 16px;
+    margin-left: 25px;
+    margin-top: 8px;
+}
+
+.check {
+    width: 200px !important;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.rad {
+    margin-left: 0px;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+
+textarea {
+    width: 250px;
+    height: 150px;
+}
+
+select {
+    margin-bottom: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border-color: #063450;
+}
+
+button {
+    margin-top: 5px;
+    width: 90px;
+}
+
+.iconos {
+    margin-right: 5px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.iconos2 {
+    float: right;
+}
+
+.user {
+    float: right;
+    margin-top: 4px;
+    margin-right: 3px;
+    height: 15px;
+    width: 15px;
+}
+
+.lognom {
+    float: right;
+    margin-right: 10px
+}
+
+.notform {
+    color: #000000;
+    position: absolute;
+    bottom: 35px;
+    left: 90px;
+}
+
+.iconform {
+    margin-bottom: 10px;
+    width: 90px;
+    height: 90px;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 2px solid #063450;
+    white-space: nowrap;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #063450;
+}
+
+.table {
+    margin-top: 15px;
+    border: 2px solid #063450;
+}
+
+.btnfil2 {
+    width: 110px;
+    margin-top: 15px;
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
+
+th {
+    font-size: 14px;
+}
+
+tfoot {
+    display: table-header-group;
+}
+
+/* Boton Actualizaciones
+============================*/
+
+/*
+.animacion{
+    background-color: #004A7F;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 11px;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+}
+@-webkit-keyframes glowing {
+    0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+    0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+    0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+    50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+    100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+.animacion {
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+}*/
+
+/* Fin Boton Actualizaciones
+==========================*/
+
+/* Preoloader */
+
+.spinnerWrapper {
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+}
+
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.credenciales{
+    margin: 0;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.credencialDanger{
+    width: 8%;
+    margin-right: 5px;
+}
+
+.credencialErronea{
+    color: #CC252C;
+    font-size: 12px;
+}

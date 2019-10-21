@@ -1,0 +1,14 @@
+.bg-verde {
+    background-color: #20cc4c
+}
+
+.wrapper {
+    margin-top: 10%;
+}
+
+.wrapper iframe {
+    width: 100%;
+    height: 250%;
+    border: 3px solid #145f27;
+    border-radius: 5px;
+}

@@ -1,0 +1,188 @@
+h3 {
+    width: 100%;
+    padding-top: 3%;
+}
+
+.modalRegistrarse {
+    border-radius: 20px !important;
+    height: 100% !important;
+    margin: 2% auto !important;
+}
+
+.modal-content {
+    padding: 2% !important;
+}
+
+.modal-body h2 {
+    margin-bottom: 0;
+    text-align: center;
+    color: #20cc4c;
+}
+
+.wrapperColumnas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.columna1, .columna2 {
+    width: 50%;
+    padding: 4%;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+
+btn-custom, .btn-primary:disabled {
+    background-color: #20cc4c;
+    border-color: #20cc4c;
+}
+
+.form-control {
+    border-radius: 500px;
+}
+
+.buttonContainerR {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-special {
+    width: 100%;
+    padding: 10px 25px !important;
+}
+
+.btn-special2 {
+    width: 100%;
+    padding: 10px 25px !important;
+    padding-bottom: 10px;
+}
+
+.btn-enviar {
+    background-color: #20cc4c;
+    color: white;
+    border-radius: 500px;
+    margin: 2% 10% 0;
+    width: 80%;
+    opacity: 1 !important;
+}
+
+.btn-enviar:hover, .btn-enviar:focus {
+    transition: 0.4s;
+    background-color: #145f27;
+    border-color: #145f27;
+    box-shadow: none
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #20cc4c;
+    border-radius: 500px;
+}
+
+.form-control:focus {
+    color: #373b3f;
+    background-color: #fff;
+    border-color: #145f27;
+    outline: 0;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #20cc4c;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #20cc4c;
+}
+
+.form-signin #inputEmail, .form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email], .form-signin input[type=password], .form-signin input[type=text], .form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 500px;
+}
+
+.form-signin .form-control:focus {
+    border-color: #145f27;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #20cc4c;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #20cc4c;
+}
+
+.close {
+    position: absolute !important;
+    color: #20cc4c;
+    opacity: 1;
+}
+
+.close:hover, .close:focus {
+    transition: 0.6s;
+    color: #145f27;
+    outline: none !important;
+}
+
+.recuperarContra {
+    margin: 8% auto !important;
+    width: 60vw;
+    max-width: 60vw;
+}
+
+.lineaRegistro {
+    width: 80%;
+    margin: 5px auto 0;
+    height: 5px;
+    border-radius: 500px;
+    background-color: #20cc4c;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 80vw !important;
+        margin: 0 auto;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.fotoPerfil {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #20cc4c;
+    border-radius: 500px;
+}
+
+input[type="file"]:focus, input[type="file"]:hover {
+    color: #373b3f;
+    background-color: #fff;
+    border-color: #145f27;
+    outline: 0;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #20cc4c;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #20cc4c;
+}

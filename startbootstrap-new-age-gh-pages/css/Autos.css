@@ -1,0 +1,51 @@
+.boton1{
+            text-decoration: none;
+            font-weight:600;
+            font-size:20px;
+            color:#FFFFFF;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 120px;
+            padding-right: 120px;
+            background-color: #dc3545;
+            border-color: #dc3545;
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 35px;
+    
+        }
+.cuadrotext{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 60px;
+            padding-right: 60px;
+            border-color: #dc3545;
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 35px;
+            
+        }
+.pr1 {
+    border-width: 2px
+}
+.pr2 {
+    color: #C51E1E;
+    background-color: transparent;
+    background-image: none;
+    border-color: #dc3545;
+        background: #blue
+}
+
+.pr2:hover, .pr2:focus{
+    color: #f8f9fa !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color:  #9F0000 !important;
+    background: #E72020 !important
+}
+
+.pr3 {
+    padding: 1rem 1.75rem;
+    font-size: 1.25rem
+}
+//seudoclases

@@ -1,0 +1,24 @@
+.bg-amarillo{
+    background-color: #FFBB00;
+}
+
+.calificacion {
+    margin-top: 18vh;
+}
+
+.estrellas img {
+    width: 55%;
+}
+
+.clasificacion {
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+.insignias {
+    background-color: #FFBB00;
+}
+
+.bg-footer-amarillo{
+    background-color: #805E00
+}

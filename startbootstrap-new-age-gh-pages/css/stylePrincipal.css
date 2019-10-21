@@ -1,0 +1,72 @@
+#hero {
+    margin-top: 05vh;
+    height: 70vh;
+}
+
+#hero .carousel-inner img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.seccion {
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+}
+
+.containerImgsDesc {
+    margin-bottom: 30px;
+}
+
+.imagenesDescri {
+    width: 100%;
+}
+
+.portfolio {
+    margin-bottom: 10vh;
+}
+
+.imagenesInsignias {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.insigniaA {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #20cc4c;
+}
+
+.insigniaB {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #3b5b7b;
+}
+
+.insignia1 {
+    background-color: #20cc4c;
+}
+
+.contact {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: #2b81b9;
+}
+
+.control-group {
+    background-color: white;
+    padding: 10px 20px 0;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+}
+
+.paraCalificaciones {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1px 40%;
+}

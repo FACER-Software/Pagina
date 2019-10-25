@@ -1,0 +1,191 @@
+<html>
+
+<head>
+    <title>Rutas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/freelancer.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stylePrincipal.css">
+    <link rel="icon" href="../img/leaf.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/viajeEnCurso.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/usuarioPrincipal.css">
+    <!--Scripts-->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-verde fixed-top text-uppercase" id="mainNav">
+        <div class="container">
+            <div class="tituloIndex">
+                <img class="logotipoWhite" src="../img/leafWhite.svg" width="40px" height="40px"
+                    style="padding-bottom: 10px;" />
+                <a class="navbar-brand js-scroll-trigger" href="./principal.html">EcoWays</a>
+            </div>
+            <div class="collapse navbar-collapse d-flex justify-content-end ml-auto" id="navbarResponsive">
+                <a class="btn boton-regresar btn-outline-light" href="./menurutas.html">
+                    Regresar
+                </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Mapa-->
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="map" id="map"></div>
+                </div>
+                <div class="col-md-3 botones d-flex">
+                    <div class="a">
+                        <button id="mandar_cambio" type="button" form="registrarse" class="btn btnCancelar">Cancelar
+                            Viaje</button>
+                        <abbr data-toggle="cancelar-viaje" data-placement="right" title="Se cobrará una tarifa">Más
+                            Información</abbr>
+                    </div>
+                    <div class="b">
+
+                        <button id="mandar_cambio" type="button" form="registrarse" class="btn btnTerminar"
+                            data-toggle="modal" data-target="#calificaciones">Terminar Viaje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Mapa-->
+
+    <!--Modal calificaciones-->
+    <div class="modal" tabindex="-1" role="dialog" id="calificaciones">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center text-uppercase texto-verde">Viaje Terminado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row my-4 text-center">
+                            <div class="col-md-7 offset-md-1 my-2">
+                                <p class="costoF">Costo final del viaje:</p>
+                            </div>
+                            <div class="col-md-1 my-2">
+                                <p class="costoF">$30</p>
+                            </div>
+                        </div>
+                        <h6 class="text-center my-4">calificación seleccionada: 0</h6>
+                        <div class="row labels">
+                            <label class="star1">
+                                <input type="radio" name="star" id="star1">
+                                <img src="../img/star1.svg">
+                            </label>
+
+                            <label class="star2">
+                                <input type="radio" name="star" id="star2">
+                                <img src="../img/star2.svg">
+                            </label>
+                            <label class="star3">
+                                <input type="radio" name="star" id="star3">
+                                <img src="../img/star3.svg">
+                            </label>
+
+                            <label class="star4">
+                                <input type="radio" name="star" id="star4">
+                                <img src="../img/star4.svg">
+                            </label>
+
+                            <label class="star5">
+                                <input type="radio" name="star" id="star5">
+                                <img src="../img/star5.svg">
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Terminar Viaje</button>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#insignias">Asignar
+                        Insignias</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal calificaciones-->
+
+    <!--Modal Insignias-->
+    <div class="modal" tabindex="-1" role="dialog" id="insignias">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center text-uppercase texto-verde">Insignias</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h6 class="text-center my-4">Selecciona las insignias</h6>
+                        <div class="row">
+                            <div class="col-lg-4 label1">
+                                <input id="checkbox" type="checkbox" />
+                                <label for="checkbox"></label>
+                                <p class="text-center">Auto limpio</p>
+                            </div>
+                            <div class="col-lg-4 label2">
+                                <input id="checkbox" type="checkbox" />
+                                <label for="checkbox"></label>
+                                <p class="text-center">Rapidez</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <input id="checkbox" type="checkbox" />
+                                <label for="checkbox"></label>
+                                <p class="text-center">Auto limpio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success">Terminar Viaje</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal Insignias-->
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVnllvE7hWvfpjWjRw2S8KkN-KRpsX4EY&" async
+        defer></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--Scripts-->
+    <script src="./viajeEnCurso.js"></script>
+    <script src="./calificaciones.js"></script>
+</body>
+
+</html>

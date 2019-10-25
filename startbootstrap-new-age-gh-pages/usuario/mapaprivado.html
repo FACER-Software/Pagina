@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+              type="text/css">
+
+        <!-- Plugin CSS -->
+        <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+        <!-- Custom styles for this template -->
+        <link href="../css/freelancer.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/stylePrincipal.css">
+        <link rel="icon" href="../img/leaf.png">
+
+        <link rel="stylesheet" href="../css/styleRegistro.css">
+        <title>Viaje Privado</title>
+        <style>
+            #right-panel {
+                font-family: 'Roboto','sans-serif';
+                line-height: 30px;
+                padding-left: 10px;
+            }
+
+            #right-panel select, #right-panel input {
+                font-size: 15px;
+            }
+
+            #right-panel select {
+                width: 100%;
+            }
+
+            #right-panel i {
+                font-size: 12px;
+            }
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #map {
+                height: 100%;
+                float: left;
+                width: 70%;
+                height: 100%;
+            }
+            #right-panel {
+                margin: 20px;
+                border-width: 2px;
+                width: 20%;
+                height: 400px;
+                float: left;
+                text-align: left;
+                padding-top: 0;
+            }
+            #directions-panel {
+                margin-top: 10px;
+                background-color: #FFEE77;
+                padding: 10px;
+                overflow: scroll;
+                height: 174px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-verde fixed-top text-uppercase" id="mainNav">
+            <div class="container">
+                <div class="tituloIndex">
+                    <img class="logotipoWhite" src="../img/leafWhite.svg" width="40px" height="40px"
+                         style="padding-bottom: 10px;" />
+                    <a class="navbar-brand js-scroll-trigger" href="./principal.jsp">EcoWays</a>
+                </div>
+                <div class="collapse navbar-collapse d-flex justify-content-end ml-auto" id="navbarResponsive">
+                    <a class="btn boton-regresar btn-outline-light" href="./menurutas.html">
+                        Regresar
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="contenedorRutasPriv">
+            <div class="container contenedorMapaPriv">
+                <div class="row">
+                    <div class="botones col-md-4 col-xs-10 offset-xs-1">
+                        <input type="button" value="Iniciar viaje" name="ruta" class="btn btn-primary"
+                               data-toggle="modal" data-target="#iniciarViaje">
+                        <a href="" class="botonMapa">
+                            <input type="button" value="Optar por viaje compartido" name="ruta"
+                                   class="btn btn-primary">
+                        </a>
+                        <a href="" class="botonMapa">
+                            <input type="button" value="Guardar ruta" name="ruta" class="btn btn-primary">
+                        </a>
+                        <a href="./menurutas.html" class="botonMapa">
+                            <input type="button" value="Consultar transporte público" name="ruta"
+                                   class="btn btn-primary">
+                        </a>
+                    </div>
+                    <div class="col-md-8 col-xs-11">
+                        <div id="map"></div>
+                        <div id="right-panel">
+                            <div>
+                                <center><h6 class="d-flex justify-content-center">Selecciona un punto de partida:</h6></center>
+                                <select id="start">
+                                    <option value="Victoria, Industrial, 07800 CDMX">Victoria, Industrial, 07800 CDMX</option>
+                                    <option value="Chapultepec, Cuauhtémoc, 06500 CDMX">Chapultepec, Cuauhtémoc, 06500 CDMX</option>
+                                    <option value="Colonia Condesa, CDMX">Colonia Condesa, Ciudad de México, CDMX</option>
+                                    <option value="Av. Pantitlán, Porfirio Diaz, Nezahualcóyotl, Méx.">Av. Pantitlán, Porfirio Diaz, Nezahualcóyotl, Méx.</option>
+                                    <option value="Av Ejército Nacional, Anzures, CDMX">Av Ejército Nacional, Anzures, CDMX</option>
+                                </select>
+                                <br>
+                                <center><h6 class="d-flex justify-content-center">Selecciona un destino:</h6></center>
+                                <select id="end">
+                                    <option value="CECyT 1 Gonzalo Vázquez Vela">CECyT 1 Gonzalo Vázquez Vela </option>
+                                    <option value="CECyT 2 Miguel Bernard Perales">CECyT 2 Miguel Bernard Perales</option>
+                                    <option value="CECyT 3 Estanislao Ramírez Ruíz">CECyT 3 Estanislao Ramírez Ruíz</option>
+                                    <option value="CECyT 4 Lázaro Cárdenas">CECyT 4 Lázaro Cárdenas</option>
+                                    <option value="CECyT 5 Benito Juárez">CECyT 5 Benito Juárez</option>
+                                    <option value="CECyT 6 Miguel Othón de Mendizabal">CECyT 6 Miguel Othón de Mendizabal</option>
+                                    <option value="CECyT 7 Cuauhtémoc">CECyT 7 Cuauhtémoc</option>
+                                    <option value="CECyT 8 Narciso Bassols García">CECyT 8 Narciso Bassols García</option>
+                                    <option value="CECyT 9 Juan de Dios Bátiz">CECyT 9 Juan de Dios Bátiz</option>
+                                    <option value="CECyT 10 Narciso Bassols García">CECyT 10 Narciso Bassols García</option>
+                                    <option value="CECyT 11 Wilfrido Massieu">CECyT 11 Wilfrido Massieu</option>
+                                    <option value="CECyT 12 José María Morelos">CECyT 12 José María Morelos</option>
+                                    <option value="CECyT 13 Ricardo Flores Magón">CECyT 13 Ricardo Flores Magón</option>
+                                    <option value="CECyT 14 Luis Enrique Erro Soler">CECyT 14 Luis Enrique Erro Soler</option>
+                                </select>
+                                <br><br><br><br>
+                                <input type="submit" id="submit" value="Buscar Ruta" class="btn btn-primary">
+                            </div>
+                            <div id="directions-panel"></div>
+                        </div>
+                        <script>
+                            function initMap() {
+                                var directionsService = new google.maps.DirectionsService;
+                                var directionsDisplay = new google.maps.DirectionsRenderer;
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                    zoom: 11,
+                                    center: {lat: 19.513435, lng: -99.124471}
+                                });
+                                directionsDisplay.setMap(map);
+
+                                document.getElementById('submit').addEventListener('click', function () {
+                                    calculateAndDisplayRoute(directionsService, directionsDisplay);
+                                });
+                            }
+
+                            function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+
+                                directionsService.route({
+                                    origin: document.getElementById('start').value,
+                                    destination: document.getElementById('end').value,
+                                    optimizeWaypoints: true,
+                                    travelMode: 'DRIVING'
+                                }, function (response, status) {
+                                    if (status === 'OK') {
+                                        directionsDisplay.setDirections(response);
+                                        var route = response.routes[0];
+                                        var summaryPanel = document.getElementById('directions-panel');
+                                        summaryPanel.innerHTML = '';
+                                        // For each route, display summary information.
+                                        for (var i = 0; i < route.legs.length; i++) {
+                                            var routeSegment = i + 1;
+                                            summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+                                                    '</b><br>';
+                                            summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+                                            summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+                                            summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+                                        }
+                                    } else {
+                                        window.alert('Directions request failed due to ' + status);
+                                    }
+                                });
+                            }
+                        </script>
+                        <div class="col-md-4 col-xs-10">
+                            <script async defer
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVnllvE7hWvfpjWjRw2S8KkN-KRpsX4EY&callback=initMap">
+                            </script>
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!--Modal para Conductores-->
+        <div class="modal fade" id="iniciarViaje" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content modalRegistrarse">
+                    <div class="modal-body">
+                        <button id="cerrar_modal" type="button" class="close" data-dismiss="modal">x</button>
+                        <h2 class="mb-4">Buscando Conductores</h2>
+                        <form id="registrarse" method="post">
+                            <div class="modal-group">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d60189.22262653312!2d-99.18384814447988!3d19.463049551600335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x85d1f9734902d70b%3A0xd5ee7d8de2675f75!2sVictoria%2C+Industrial%2C+Ciudad+de+M%C3%A9xico%2C+CDMX!3m2!1d19.473946599999998!2d-99.12297079999999!4m5!1s0x85d1f9f70854d2bb%3A0xbcbf084d254ff5f3!2sCECyT+9+%E2%80%9CJuan+de+Dios+Batiz%E2%80%9D%2C+Mar+Mediterr%C3%A1neo%2C+Nextitla%2C+Ciudad+de+M%C3%A9xico%2C+CDMX!3m2!1d19.453986999999998!2d-99.17507839999999!5e0!3m2!1ses!2smx!4v1555288949754!5m2!1ses!2smx"
+                                    allowfullscreen class="my-3 d-flex align-items-center">
+                                </iframe>
+                            </div>
+                            <div class="modal-group">
+                                <div class="container infoViaje">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-md-3 d-flex align-items-center">
+                                            <img src="../img/user.svg" alt="">
+                                        </div>
+                                        <div class="col-md-3 d-flex align-items-center">
+                                            <img src="../img/user.svg" alt="">
+                                        </div>
+                                        <div class="col-md-3 d-flex align-items-center">
+                                            <h6>Información</h6>
+                                        </div>
+                                        <div class="col-md-3 d-flex align-items-center">
+                                            <h6>Costo</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-group">
+                                <button id="mandar_cambio" type="button" form="registrarse" class="btn btnAceptar"
+                                        data-toggle="modal" data-target="#metodoPago">Aceptar
+                                    Conductor</button>
+                                <button id="mandar_cambio" type="button" form="registrarse" class="btn btnBuscar">Buscar
+                                    otro Conductor</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal para Conductores-->
+
+        <!--Modal para pago-->
+        <div class="modal fade" id="metodoPago" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content modalRegistrarse">
+                    <div class="modal-body">
+                        <button id="cerrar_modal" type="button" class="close" data-dismiss="modal">x</button>
+                        <h2 class="mb-4">Método de pago</h2>
+                        <div class="modal-group metodosPago">
+                            <label class="tarjeta text-center">
+                                <input type="radio" name="pay">
+                                <img src="../img/card.svg" alt=""><br><br>
+                                <h6>Tarjeta de Credito</h6>
+                            </label>
+
+                            <label class="efectivo text-center">
+                                <input type="radio" name="pay">
+                                <img src="../img/dollar-bills.svg" alt=""><br><br>
+                                <h6>Efectivo</h6> 
+                            </label>
+                            <div class="modal-group botones">
+                                <a href="./viajeEnCurso.html">
+                                    <button id="mandar_cambio" type="button" form="registrarse" class="btn btnComenzar" data-toggle="modal"
+                                            data-target="#metodoPago">Comenzar Viaje</button>
+                                </a>
+                                <button id="mandar_cambio" type="button" form="registrarse" class="btn btnBack">Regresar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal para pago-->
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    </body>
+</html>

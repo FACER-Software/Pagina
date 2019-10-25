@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html style=" margin:0px; width: 100%; height: 100%">
+    <head>
+        <title>Efectivo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Pagos/web/css/forma.css" rel="stylesheet" type="text/css">
+         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+        <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+    <!-- Plugin CSS -->
+        <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+        <link href="../css/freelancer.min.css" rel="stylesheet">
+        <link rel="icon" href="img/leaf.png">
+        <link rel="stylesheet" href="../css/calificaciones.css">
+        <link rel="stylesheet" href="../css/colores.css">
+        <link rel="stylesheet" href="../css/fuentes.css">
+        <script>
+            function solonumeros(e){
+            key=e.keyCode || e.which;
+            teclado=String.fromCharCode(key);
+            numero="0123456789";
+            especiales="1-2-3-4-5-6-7-8-9-0"; //array
+            teclado_especial=false;
+            
+            for (var i in especiales) {
+                if(key === especiales[i]){
+                    teclado_especial=true;
+                }
+            }
+            if(numero.indexOf(teclado) === -1 && !teclado_especial){
+                return false;
+            }
+        }
+            
+           function kikenumer(){
+               
+           }
+           function pasar(){
+               
+           }
+        </script>
+        
+        <style type="text/css">
+        .boton1{
+            text-decoration: none;
+            font-weight:600;
+            font-size:20px;
+            color:#FFFFFF;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: #2b81b9;
+            border-color: #2b81b9;
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 35px;
+    
+        }
+        </style>
+        
+    </head>
+    <body style="display: table; width: 100%; height: 100%">
+         <nav class="navbar navbar-expand-lg bg-amarillo fixed-top text-uppercase" id="mainNav" style="display: table; width: 100%; height: 15%; float: left; background-color: #9f9f9f" >
+            <div class="container">
+                <div class="tituloIndex">
+                    <img class="logotipoWhite" src="../img/leafWhite.svg" width="40px" height="40px"
+                     style="padding-bottom: 10px;" />
+                    <a class="navbar-brand js-scroll-trigger" href="./principal.html">EcoWays</a>
+                </div>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarResponsive">
+                    <a class="btn btn-l mt-1 btn-outline-light" href="./principal.html">
+                        Regresar
+                    </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+        <div style="display: table; width: 100%; height: 50%; float: left; background-color: #FFFFFF">
+           <br><br><br><br><br><br><br><br>
+
+                <Center>
+                <h2 style="color:#2b81b9">Efectivo</h2>
+            <br><br>
+                <h3 style="color:#3b5b7b">Inserte total de viaje</h3>
+                <br>
+                <input type="text" id="via" name="viaje" onkeypress="return solonumeros(event)" onpaste="return false">
+                <br><br>
+                <h3 style="color:#3b5b7b">Inserte Monto</h3>
+                <br>
+                <input type="text" id="diner" name="dinero" onkeypress="return solonumeros(event)" onpaste="return false">
+                <br><br><br><br>
+            
+            <a id="pagar" class="boton1" href="principal.html">Pagar</a>
+            </Center>
+           <br><br><br><br><br><br>
+        </div>
+        
+        
+        <div style="display: table; width: 100%; height: 25%; float: left; background-color: #3b5b7b" >
+            <br><br><br>
+            <center><h6 style="color:#FFFFFF">Copyright @ AjoloCoding 2019</h6></center>
+        </div>
+    </body>
+</html>

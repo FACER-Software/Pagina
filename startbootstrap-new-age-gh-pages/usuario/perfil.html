@@ -147,6 +147,7 @@
     </nav>
 
     <!--Datos-->
+    
     <div class="wrapperPerfil mb-4">
         <div class="container-fluid">
             <div class="row">
@@ -156,6 +157,7 @@
                              %>" alt="" style="background-color: #2b81b9">
                 </div>
                 <div class="col-sm-4">
+                    <h3 class="text-center texto-verde">Información personal</h3>
                     <ul class="ajaja">
                         <li>Nombre: <%
                                             out.print(nombre);
@@ -164,14 +166,20 @@
                                 <img src="../img/nut-icon-blue.svg" alt="nut-icon">
                             </button>
                         </li>
-                        <li>Edad: <%
+                        <li>Apellido Paterno: <%
                                             out.print(edad);
                                 %>
                             <button data-toggle="modal" data-target="#cambiarEdad">
                                 <img src="../img/nut-icon-blue.svg" alt="nut-icon">
                             </button>
                         </li>
-                        <li>Escuela: <%
+                        <li>Apellido Materno: <%
+                                            out.print(escuela);
+                                %><button data-toggle="modal" data-target="#cambiarEscuela">
+                                <img src="../img/nut-icon-blue.svg" alt="nut-icon">
+                            </button>
+                        </li>
+                        <li>Nombre de Usuario: <%
                                             out.print(escuela);
                                 %><button data-toggle="modal" data-target="#cambiarEscuela">
                                 <img src="../img/nut-icon-blue.svg" alt="nut-icon">
@@ -188,11 +196,11 @@
                 </div>
                 <div class="col-sm-2 offset-sm-1 d-flex align-items-center flex-wrap">
                     <a href="./calificaciones.html" class="botonesPerfila">
-                        <button class="btn btn-warning botonesPerfil">Insignias</button>
+                        <button class="btn btn-warning botonesPerfil">Ver datos de Mi Dieta</button>
                     </a>
-                    <a href="./historial.jsp" class="botonesPerfila">
+                    <!--<a href="./historial.jsp" class="botonesPerfila">
                         <button class="btn btn-danger botonesPerfil">Historial de viajes</button>
-                    </a>
+                    </a>-->
                 </div>
                 <div class="col-sm-1 d-flex align-items-center">
                     <button data-toggle="modal" data-target="#borrarUsuario" class="borrarUsuario">

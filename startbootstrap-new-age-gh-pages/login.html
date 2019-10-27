@@ -30,8 +30,8 @@ and open the template in the editor.
             <div class="card card-container">
                 <a href="index.html">
                     <div class="tituloLogin">
-                        <img src="./img/leaf.svg" alt="logotipo" />
-                        <h1 class="text-center colorEcoWays">EcoWays</h1>
+                        
+                        <h1 class="text-center colorEcoWays">e-Fortless Shopping</h1>
                     </div>
                 </a>
                 <p id="error_msg" class="profile-name-card"></p>
@@ -52,12 +52,12 @@ and open the template in the editor.
                 <div class="buttonContainerR">
                     <a href="#myModal" class="sinDecoration">
                         <button form="ingreso" class="btn btn-primary btn-signin btn-special" type="button"
-                            data-toggle="modal" data-target="#politecnico">Politécnico</button>
+                            data-toggle="modal" data-target="#politecnico">Registrarme</button>
                     </a>
-                    <a href="#myModal" class="sinDecoration">
+                    <!--<a href="#myModal" class="sinDecoration">
                         <button form="ingreso" class="btn btn-primary btn-signin btn-special" type="button"
                             data-toggle="modal" data-target="#conductor">Conductor</button>
-                    </a>
+                    </a>-->
                 </div>
                 <a href="#olvido" class="pt-4" data-toggle="modal"><span class="colorEcoWays">
                         ¿Olvidaste tu contraseña?
@@ -108,32 +108,22 @@ and open the template in the editor.
                                     <input id="NombreP" name="NombrePoli" type="text" placeholder="Ingrese Nombre"
                                         class="form-control" required>
                                 </div>
-                                <label>Edad</label>
+                                <!--Aqui estaba el de Edad-->
+                                <label>Apellido Paterno</label>
                                 <div class="form-group">
-                                    <input id="EdadP" name="EdadPolitecnico" type="text" placeholder="Ingrese Edad"
+                                    <input id="ApellidoPat" name="ApellidoPat" type="text" placeholder="Ingrese Apellido Paterno"
                                         class="form-control" required>
                                 </div>
-                                <label>Celular</label>
+                                <!--Aqui estaba el del celular-->
+                                <label>Apellido Materno</label>
                                 <div class="form-group">
-                                    <input id="celP" name="celular" type="tel" placeholder="Numero de Celular"
+                                    <input id="ApellidoMat" name="ApellidoMat" type="text" placeholder="Apellido Materno"
                                         class="form-control" maxlength="10" required>
                                 </div>
-                                <label>Escuela</label>
+                                <label>Nombre de Usuario</label>
                                 <div class="form-group">
-                                    <select id="EscuelaP" name="EscuelaPolitecnico" class="form-control" required>
-                                        <option> CECyT 1 </option>
-                                        <option> CECyT 2</option>
-                                        <option> CECyT 3</option>
-                                        <option> CECyT 4</option>
-                                        <option> CECyT 5</option>
-                                        <option> CECyT 6</option>
-                                        <option> CECyT 7</option>
-                                        <option> CECyT 8</option>
-                                        <option> CECyT 9</option>
-                                        <option> CECyT 10</option>
-                                        <option> CECyT 11</option>
-                                        <option> CECyT 12</option>
-                                    </select>
+                                    <input id="NombreUS" name="nombreus" type="text" placeholder="Nombre de Usuario"
+                                        class="form-control" maxlength="10" required>
                                 </div>
                                 <div class="form-group">
                                     <h2 id="mensaje_validacion_password" class="form-control" hidden></h2>
@@ -160,52 +150,59 @@ and open the template in the editor.
                                     <input id="repetir" name="repetir" type="password" placeholder="Repetir Contraseña"
                                         class="form-control" required>
                                 </div>
-                                <label>Boleta/Numero de Empleado</label>
+                                <label>Municipio</label>
                                 <div class="form-group">
-                                    <input id="BoletaP" name="BoletaPoli" type="text" placeholder="Ingrese Boleta"
+                                    <input id="BoletaP" name="BoletaPoli" type="text" placeholder="Ingrese Municipio"
                                         class="form-control" required>
                                 </div>
-                                <label>Foto de La credencial del Politécnico:</label>
+                                <!--<label>Foto de La credencial del Politécnico:</label>
                                 <label for="FotoCredeP" class="fotoPerfil">Selecciona archivo</label>
                                 <div class="form-group">
                                     <input type="file" id="FotoCredeP" name="FotoCrede" required>
-                                </div>
+                                </div>-->
                             </div>
-                            <h3 class="text-center texto-verde ">Información personal</h3>
+                            <h3 class="text-center texto-verde ">Información Nutrimental</h3>
                             <hr class="lineaRegistro">
                             <div class="columna1">
-                                <label>Calle</label>
+                                <label>Peso</label>
                                 <div class="form-group">
                                     <input id="CalleP" name="Calle" type="text" placeholder="Nombre de la calle"
                                         class="form-control" required>
                                 </div>
-                                <label>Numero Interior</label>
+                                <label>Talla</label>
                                 <div class="form-group">
                                     <input id="numIntCalleP" name="NumInt" type="text"
                                         placeholder="Numero interior del Domicilio" class="form-control">
                                 </div>
-                                <label>Codigo Postal</label>
+                                
+                            </div>
+                            <div class="columna2">
+                                <label>Altura</label>
                                 <div class="form-group">
                                     <input id="CodigoPP" name="CPostal" type="text" placeholder="Codigo Postal"
                                         class="form-control" required>
                                 </div>
-                            </div>
-                            <div class="columna2">
-                                <label>Numero</label>
+                                <label>Numero de comidas al dia</label>
                                 <div class="form-group">
-                                    <input id="numCalleP" name="NumCalle" type="text" placeholder="Numero del Domicilio"
-                                        class="form-control" required>
+                                    <select id="Comidas" name="Comidas" class="form-control" required>
+                                        <option> 1 </option>
+                                        <option> 2 </option>
+                                        <option> 3 </option>
+                                        <option> 4 </option>
+                                        <option> 5 </option>
+                                    </select>
                                 </div>
-                                <label>Colonia</label>
+                                <!--
+                                <label>Calorias al día (aprox)</label>
                                 <div class="form-group">
                                     <input id="ColoP" name="Colo" type="text" placeholder="Nombre de la colonia"
                                         class="form-control" required>
                                 </div>
-                                <label>Alcaldia/Municipio</label>
+                                <label>Azúcares al día (aprox)</label>
                                 <div class="form-group">
                                     <input id="MunicipioP" name="Muni" type="text"
                                         placeholder="Nombre de la Alcaldía/Municipio" class="form-control" required>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <div class="modal-group">
@@ -219,7 +216,7 @@ and open the template in the editor.
     </div>
     </div>
     <!-- Fin Modal Politecnico -->
-        <!-- Modal Conductor--->
+        <!-- Modal Conductor
         <div class="modal fade" id="conductor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content modalRegistrarse">
@@ -333,13 +330,13 @@ and open the template in the editor.
             </div>
         </div>
         
-        <!--Modal para Conductores-->
+        Modal para Conductores-->
 
 
     <footer class="page-footer font-small blue">
         <div class="copyright py-4 text-center text-white">
             <div class="container">
-                <small>Copyright &copy; AjoloCoding 2019</small>
+                <small>Copyright &copy; FACER Software 2019</small>
             </div>
         </div>
     </footer>

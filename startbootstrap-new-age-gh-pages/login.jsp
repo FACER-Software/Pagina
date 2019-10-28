@@ -19,50 +19,45 @@
 
             try {
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
-                con = DriverManager.getConnection("jdbc:mysql://localhost/EcoWaysDB", "root", "n0m3l0");
+                con = DriverManager.getConnection("jdbc:mysql://localhost/UsuariosFACER", "root", "n0m3l0");
                 stm = con.createStatement();
             } catch (SQLException error) {
                 out.println(error.toString());
             }
 
             try {
-                resul = stm.executeQuery("SELECT * FROM Usuario, poliDat where correoUsuario='" + email + "' and contraUsuario='" + contra + "'");
+                resul = stm.executeQuery("SELECT * FROM UsuariosFACER, DatosUs where Correo='" + email + "' and Pass='" + contra + "'");
                 if (resul.next()) {
-                    int id = resul.getInt("idUsuario");
-                    String nombre = resul.getString("nombreUsuario");
-                    String correo = resul.getString("correoUsuario");
-                    int estado = resul.getInt("estadoUsuario");
+                    int id = resul.getInt("idUs");
+                    String correo = resul.getString("Correo");
                     String password = resul.getString("contraUsuario");
-                    String celular = resul.getString("celUsuario");
-                    String edad = resul.getString("edadUsuario");
-                    String escuela = resul.getString("nomEscuela");
-                    String fotoPoli = resul.getString("fotoPoli");
-                    int idTipoUsuario = resul.getInt("idTipoUsuario");
-                    float calif = resul.getFloat("califUsuario");
+                    String nombre = resul.getString("nombreUs");
+                    String apellidoP = resul.getString("ApellidoPus");
+                    String apellidoM = resul.getString("ApellidoMus");
+                    int edad = resul.getInt("Edad");
+                    date fechaNac = resul.getDate("FechaNac");
+                    double altura = resul.getDouble("Altura");
+                    double peso = resul.getDouble("Peso");
+                    int talla = resul.getInt("Talla");
+                    String municipio = resul.getString("Muni");
                     HttpSession sesion = request.getSession();
                     sesion.setAttribute("id", id);
-                    sesion.setAttribute("nombre", nombre);
                     sesion.setAttribute("correo", correo);
-                    sesion.setAttribute("estado", estado);
                     sesion.setAttribute("password", password);
-                    sesion.setAttribute("celular", celular);
+                    sesion.setAttribute("nombre", nombre);
+                    sesion.setAttribute("apellidoP", apellidoP);
+                    sesion.setAttribute("apellidoM", apellidoM);
                     sesion.setAttribute("edad", edad);
-                    sesion.setAttribute("calificacion", calif);
-                    sesion.setAttribute("escuela", escuela);
-                    sesion.setAttribute("fotoPoli", fotoPoli);
-                    if(estado == 1){
-                        if(idTipoUsuario == 1){
-                            response.sendRedirect("./usuario/principal.jsp");
-                        }
-                        if(idTipoUsuario == 2){
-                            response.sendRedirect("./usuario/VehiculoM.html");
-                        }
+                    sesion.setAttribute("fechaNac", fechaNac);
+                    sesion.setAttribute("altura", altura);
+                    sesion.setAttribute("peso", peso);
+                    sesion.setAttribute("talla", talla);
+                    sesion.setAttribute("municipio", municipio);
+                    if(correo = resul.getString("Correo");){
+                        response.sendRedirect("Usuarios.html")
                     }
-                    else if(estado == 2){
-                            response.sendRedirect("./usuario/principalInactivo.jsp");
-                    } 
                 } else {
-                    response.sendRedirect("loginRechazado.html");
+                    response.sendRedirect("login.html");
                 }
 
                 con.close();

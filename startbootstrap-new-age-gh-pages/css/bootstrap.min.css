@@ -2242,10 +2242,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-outline-light {
-    color: #f8f9fa;
+    color: #8dfff7;
     background-color: transparent;
     background-image: none;
-    border-color: #f8f9fa
+    border-color: #8dfff7
 }
 
 .btn-outline-light:hover {

@@ -44,15 +44,17 @@
                     HttpSession sesion = request.getSession();
                     int id = (Integer)sesion.getAttribute("id");
                     String nombre = (String)sesion.getAttribute("nombre");
-                    String edad = (String)sesion.getAttribute("edad");
+                    String apellidoPat = (String)sesion.getAttribute("ApellidoPus");
+                    String apellidoMat = (String)sesion.getAttribute("ApellidoMus");
+                    String fechaN = (String)sesion.getAttribute("FechaNac");
                     String correo = (String)sesion.getAttribute("correo");
                     String password = (String)sesion.getAttribute("password");
-                    String escuela = (String)sesion.getAttribute("escuela");
-                    String fotoPoli = (String)sesion.getAttribute("fotoPoli");
+                   // String escuela = (String)sesion.getAttribute("escuela");
+                    //String fotoPoli = (String)sesion.getAttribute("fotoPoli");
          
                     try {
                         Class.forName("com.mysql.jdbc.Driver").newInstance();
-                        con = DriverManager.getConnection("jdbc:mysql://localhost/EcoWaysDB", "root", "n0m3l0");
+                        con = DriverManager.getConnection("jdbc:mysql://localhost/UsuariosFACER", "root", "n0m3l0");
                         stm = con.createStatement();
                     } catch (SQLException error) {
                         out.println(error.toString());
@@ -61,10 +63,10 @@
                     if(request.getParameter("cambiarNombreBtn") != null){
                         try{
                         String nuevoNombre = request.getParameter("nuevoNombre");
-                        stm.executeUpdate("UPDATE Usuario SET nombreUsuario='" + nuevoNombre + "'where idUsuario='" + id + "'");
-                        resul = stm.executeQuery("SELECT * FROM Usuario where idUsuario='" + id + "'");
+                        stm.executeUpdate("UPDATE DatosUs SET NombreUs='" + nuevoNombre + "'where IdUs='" + id + "'");
+                        resul = stm.executeQuery("SELECT * FROM DatosUs where IdUs='" + id + "'");
                         if(resul.next()){
-                            nombre = resul.getString("nombreUsuario");
+                            nombre = resul.getString("NombreUs");
                             sesion.setAttribute("nombre", nombre);
                         }
                         response.sendRedirect("./perfil.jsp");
@@ -74,7 +76,7 @@
                         }
 
                     }
-                
+               
                     if(request.getParameter("cambiarEdadBtn") != null){
                         try{
                         String nuevaEdad = request.getParameter("nuevaEdad");
@@ -373,7 +375,40 @@
         <!-- Modal Cambiar Edad-->
 
         <!-- Modal Cambiar Escuela-->
-        <div class="modal fade" id="cambiarEscuela" tabindex="-1" role="dialog"
+        <div class="modal fade" id="cambiarNombre" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class=" modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <form action="./perfil.jsp">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title texto-azul" id="exampleModalLongTitle">Nombre de Usuario</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Apellido Materno:<span class="pl-2">
+                                    <%
+                                        out.print( apellidoMat);
+                                        %>
+                                </span>
+                            </p>
+                            <p class="d-flex">Nuevo apellido de usuario:<input type="text" class="ml-2 p-1 nuevoNombre"
+                                    name="nuevoAp" required></p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary cerrarBtn"
+                                data-dismiss="modal">Cerrar</button>
+                            <input type="submit" class="btn btn-primary guardarBtn" name="cambiarNombreBtn"
+                                value="Guardar cambios">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--<div class="modal fade" id="cambiarEscuela" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class=" modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -387,7 +422,7 @@
                         </div>
                         <div class="modal-body">
                             <p>Escuela de usuario:<span class="pl-2">
-                                    <%
+                                    
                                         out.print( escuela);
                                         %>
                                 </span>
@@ -419,7 +454,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- Modal Cambiar Escuela-->
 
         <!-- Modal Cambiar Correo-->
